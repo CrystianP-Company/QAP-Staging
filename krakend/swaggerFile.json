@@ -1,0 +1,55 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Mock API ",
+    "description": "Example ",
+    "version": "0.1.9"
+  },
+  "servers": [
+    {
+      "url": "https://prod.samplecustomer.com"
+    },
+    {
+      "url": "https://sandbox.samplecustomer.com"
+    }
+  ],
+  "tags": [],
+  "paths": {
+    "openapi": "3.0.0",
+    "info": {
+      "title": "Mock API ",
+      "description": "Example ",
+      "version": "0.1.9"
+    },
+    "servers": [
+      {
+        "url": "https://prod.samplecustomer.com"
+      },
+      {
+        "url": "https://sandbox.samplecustomer.com"
+      }
+    ],
+    "tags": [],
+    "paths": {
+      "/mockapi/billings": {
+        "get": {
+          "summary": "Endpoint",
+          "responses": {
+            "200": {
+              "description": "Successful Response",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "components": {}
+  },
+  "components": {}
+}
