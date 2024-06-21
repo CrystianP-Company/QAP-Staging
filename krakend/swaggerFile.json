@@ -1,0 +1,117 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Sample API",
+    "description": "Optional multiline or single-line description in CommonMark or HTML.",
+    "version": "0.1.9"
+  },
+  "servers": [
+    {
+      "url": "https://sandbox.samplecustomer.com"
+    },
+    {
+      "url": "https://prod.samplecustomer.com"
+    }
+  ],
+  "tags": [],
+  "paths": {
+    "openapi": "3.0.0",
+    "info": {
+      "title": "Sample API",
+      "description": "Optional multiline or single-line description in CommonMark or HTML.",
+      "version": "0.1.9"
+    },
+    "servers": [
+      {
+        "url": "https://sandbox.samplecustomer.com"
+      },
+      {
+        "url": "https://prod.samplecustomer.com"
+      }
+    ],
+    "tags": [],
+    "paths": {
+      "openapi": "3.0.0",
+      "info": {
+        "title": "Mock API ",
+        "description": "Example ",
+        "version": "0.1.9"
+      },
+      "servers": [
+        {
+          "url": "https://prod.samplecustomer.com"
+        },
+        {
+          "url": "https://sandbox.samplecustomer.com"
+        }
+      ],
+      "tags": [],
+      "paths": {
+        "openapi": "3.0.0",
+        "info": {
+          "title": "Mock API ",
+          "description": "Example ",
+          "version": "0.1.9"
+        },
+        "servers": [
+          {
+            "url": "https://prod.samplecustomer.com"
+          },
+          {
+            "url": "https://sandbox.samplecustomer.com"
+          }
+        ],
+        "tags": [],
+        "paths": {
+          "/mockapi/billings": {
+            "get": {
+              "summary": "Endpoint",
+              "responses": {
+                "200": {
+                  "description": "Successful Response",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "type": "object"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "components": {}
+      },
+      "components": {}
+    },
+    "components": {
+      "securitySchemes": {
+        "bearerAuth": {
+          "type": "http",
+          "scheme": "bearer",
+          "bearerFormat": "JWT"
+        }
+      }
+    },
+    "security": [
+      {
+        "bearerAuth": []
+      }
+    ]
+  },
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    }
+  },
+  "security": [
+    {
+      "bearerAuth": []
+    }
+  ]
+}
