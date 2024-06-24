@@ -1,0 +1,58 @@
+{
+  "version": 3,
+  "name": "Mock API ",
+  "timeout": "5000ms",
+  "cache_ttl": "300s",
+  "output_encoding": "json",
+  "port": 3890,
+  "endpoints": [
+    {
+      "endpoint": "/mockapi/billings",
+      "method": "GET",
+      "output_encoding": "no-op",
+      "input_headers": [
+        "*"
+      ],
+      "extra_config": {
+        "security/cors": {
+          "name": "Billings",
+          "allow_origins": [
+            "*"
+          ],
+          "allow_methods": [
+            "GET",
+            "HEAD",
+            "POST"
+          ],
+          "expose_headers": [
+            "Content-Length",
+            "Content-Type"
+          ],
+          "allow_headers": [
+            "Accept-Language"
+          ],
+          "max_age": "12h",
+          "allow_credentials": false,
+          "debug": false,
+          "url_pattern": "/api/billing/charge",
+          "encoding": "json",
+          "sd": "static",
+          "cache_ttl": "",
+          "disable_host_sanitize": ""
+        }
+      },
+      "backend": [
+        {
+          "url_pattern": "/api/billing/charge",
+          "encoding": "json",
+          "sd": "static",
+          "method": "GET",
+          "extra_config": {},
+          "host": [
+            "https://6616e44ced6b8fa43481954f.mockapi.io"
+          ]
+        }
+      ]
+    }
+  ]
+}
