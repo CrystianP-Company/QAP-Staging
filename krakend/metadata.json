@@ -1,0 +1,12 @@
+{
+  "workspace": {
+    "name": "LeilaWS",
+    "description": "Exemple workspace",
+    "dockerRegistry": "gitHub-package-registry"
+  },
+  "environment": {
+    "repository": "staging.git",
+    "gitUsername": "CrystianP-Company"
+  },
+  "variables": []
+}
