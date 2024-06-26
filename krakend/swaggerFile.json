@@ -1,0 +1,63 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Sample API",
+    "description": "Optional multiline or single-line description in CommonMark or HTML.",
+    "version": "0.1.9"
+  },
+  "servers": [
+    {
+      "url": "https://qap-workspace-pipeline-test-qfm4nbgbkq-uc.a.run.app"
+    },
+    {
+      "url": "https://qap-workspace-pipeline-test-qfm4nbgbkq-uc.a.run.app"
+    }
+  ],
+  "tags": [],
+  "paths": {
+    "openapi": "3.0.0",
+    "info": {
+      "title": "Sample API",
+      "description": "Optional multiline or single-line description in CommonMark or HTML.",
+      "version": "0.1.9"
+    },
+    "servers": [
+      {
+        "url": "https://qap-workspace-pipeline-test-qfm4nbgbkq-uc.a.run.app"
+      },
+      {
+        "url": "https://qap-workspace-pipeline-test-qfm4nbgbkq-uc.a.run.app"
+      }
+    ],
+    "tags": [],
+    "paths": {},
+    "components": {
+      "securitySchemes": {
+        "bearerAuth": {
+          "type": "http",
+          "scheme": "bearer",
+          "bearerFormat": "JWT"
+        }
+      }
+    },
+    "security": [
+      {
+        "bearerAuth": []
+      }
+    ]
+  },
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    }
+  },
+  "security": [
+    {
+      "bearerAuth": []
+    }
+  ]
+}
