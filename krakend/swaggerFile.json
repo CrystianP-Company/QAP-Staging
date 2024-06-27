@@ -1,0 +1,63 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Mock API",
+    "description": "Example ",
+    "version": "0.1.9"
+  },
+  "servers": [
+    {
+      "url": "/"
+    },
+    {
+      "url": "/"
+    }
+  ],
+  "tags": [],
+  "paths": {
+    "openapi": "3.0.0",
+    "info": {
+      "title": "Mock API",
+      "description": "Example ",
+      "version": "0.1.9"
+    },
+    "servers": [
+      {
+        "url": "/"
+      },
+      {
+        "url": "/"
+      }
+    ],
+    "tags": [],
+    "paths": {},
+    "components": {
+      "securitySchemes": {
+        "bearerAuth": {
+          "type": "http",
+          "scheme": "bearer",
+          "bearerFormat": "JWT"
+        }
+      }
+    },
+    "security": [
+      {
+        "bearerAuth": []
+      }
+    ]
+  },
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    }
+  },
+  "security": [
+    {
+      "bearerAuth": []
+    }
+  ]
+}

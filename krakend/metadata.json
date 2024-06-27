@@ -1,0 +1,12 @@
+{
+  "workspace": {
+    "name": "Mock WS",
+    "description": "Exemple workspace",
+    "dockerRegistry": "gitHub-package-registry"
+  },
+  "environment": {
+    "repository": "QAP-Staging.git",
+    "gitUsername": "CrystianP-Company"
+  },
+  "variables": []
+}
