@@ -1,0 +1,12 @@
+{
+  "workspace": {
+    "name": "Pet Store Workspace",
+    "description": "Push Workspace Pet Store",
+    "dockerRegistry": "gitHub-package-registry"
+  },
+  "environment": {
+    "repository": "QAP-Staging.git",
+    "gitUsername": "CrystianP-Company"
+  },
+  "variables": []
+}
