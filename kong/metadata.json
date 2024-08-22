@@ -1,0 +1,17 @@
+{
+  "workspace": {
+    "name": "New Workspace v1-rc",
+    "description": "Teste",
+    "dockerRegistry": "gitLab-container-registry"
+  },
+  "environment": {
+    "repository": "QAP-Staging.git",
+    "gitUsername": "CrystianP-Company"
+  },
+  "variables": [
+    {
+      "key": "env01",
+      "value": "01"
+    }
+  ]
+}
