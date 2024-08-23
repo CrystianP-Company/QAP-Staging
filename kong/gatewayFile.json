@@ -1,0 +1,559 @@
+{
+  "version": 3,
+  "name": "API-Raiane",
+  "timeout": "5000ms",
+  "cache_ttl": "300s",
+  "output_encoding": "no-op",
+  "port": "3890",
+  "endpoints": [
+    {
+      "endpoint": "/qap/pet",
+      "method": "PUT",
+      "output_encoding": "no-op",
+      "input_headers": [
+        "*"
+      ],
+      "input_query_strings": [],
+      "extra_config": {
+        "security/cors": {
+          "name": "pet",
+          "allow_origins": [
+            "*"
+          ],
+          "allow_methods": [
+            "GET",
+            "HEAD",
+            "POST"
+          ],
+          "expose_headers": [
+            "Content-Length",
+            "Content-Type"
+          ],
+          "allow_headers": [
+            "Accept-Language"
+          ],
+          "max_age": "12h",
+          "allow_credentials": false,
+          "debug": false,
+          "url_pattern": "/api/v3/pet",
+          "encoding": "no-op",
+          "sd": "static",
+          "timeout": "3000ms",
+          "cache_ttl": "300s",
+          "host": [
+            "https://swagger-petstore-7rpm2ln3fa-uc.a.run.app"
+          ],
+          "disable_host_sanitize": false
+        }
+      },
+      "backend": [
+        {
+          "url_pattern": "/api/v3/pet",
+          "encoding": "no-op",
+          "sd": "static",
+          "method": "PUT",
+          "extra_config": {},
+          "host": [
+            "https://swagger-petstore-7rpm2ln3fa-uc.a.run.app"
+          ],
+          "cache_ttl": "300s"
+        }
+      ]
+    },
+    {
+      "endpoint": "/qap/pet",
+      "method": "POST",
+      "output_encoding": "no-op",
+      "input_headers": [
+        "*"
+      ],
+      "input_query_strings": [],
+      "extra_config": {
+        "security/cors": {
+          "name": "pet",
+          "allow_origins": [
+            "*"
+          ],
+          "allow_methods": [
+            "GET",
+            "HEAD",
+            "POST"
+          ],
+          "expose_headers": [
+            "Content-Length",
+            "Content-Type"
+          ],
+          "allow_headers": [
+            "Accept-Language"
+          ],
+          "max_age": "12h",
+          "allow_credentials": false,
+          "debug": false,
+          "url_pattern": "/api/v3/pet",
+          "encoding": "no-op",
+          "sd": "static",
+          "timeout": "3000ms",
+          "cache_ttl": "300s",
+          "host": [
+            "https://swagger-petstore-7rpm2ln3fa-uc.a.run.app"
+          ],
+          "disable_host_sanitize": false
+        }
+      },
+      "backend": [
+        {
+          "url_pattern": "/api/v3/pet",
+          "encoding": "no-op",
+          "sd": "static",
+          "method": "POST",
+          "extra_config": {},
+          "host": [
+            "https://swagger-petstore-7rpm2ln3fa-uc.a.run.app"
+          ],
+          "cache_ttl": "300s"
+        }
+      ]
+    },
+    {
+      "endpoint": "/qap/pet/findByStatus",
+      "method": "GET",
+      "output_encoding": "no-op",
+      "input_headers": [
+        "*"
+      ],
+      "input_query_strings": [
+        "status"
+      ],
+      "extra_config": {
+        "security/cors": {
+          "name": "findByStatus",
+          "allow_origins": [
+            "*"
+          ],
+          "allow_methods": [
+            "GET",
+            "HEAD",
+            "POST"
+          ],
+          "expose_headers": [
+            "Content-Length",
+            "Content-Type"
+          ],
+          "allow_headers": [
+            "Accept-Language"
+          ],
+          "max_age": "12h",
+          "allow_credentials": false,
+          "debug": false,
+          "url_pattern": "/api/v3/pet/findByStatus",
+          "encoding": "no-op",
+          "sd": "static",
+          "timeout": "3000ms",
+          "cache_ttl": "300s",
+          "host": [
+            "https://swagger-petstore-7rpm2ln3fa-uc.a.run.app"
+          ],
+          "disable_host_sanitize": false
+        }
+      },
+      "backend": [
+        {
+          "url_pattern": "/api/v3/pet/findByStatus",
+          "encoding": "no-op",
+          "sd": "static",
+          "method": "GET",
+          "extra_config": {},
+          "host": [
+            "https://swagger-petstore-7rpm2ln3fa-uc.a.run.app"
+          ],
+          "cache_ttl": "300s"
+        }
+      ]
+    },
+    {
+      "endpoint": "/qap/pet/findByTags",
+      "method": "GET",
+      "output_encoding": "no-op",
+      "input_headers": [
+        "*"
+      ],
+      "input_query_strings": [
+        "tags"
+      ],
+      "extra_config": {
+        "security/cors": {
+          "name": "findByTags",
+          "allow_origins": [
+            "*"
+          ],
+          "allow_methods": [
+            "GET",
+            "HEAD",
+            "POST"
+          ],
+          "expose_headers": [
+            "Content-Length",
+            "Content-Type"
+          ],
+          "allow_headers": [
+            "Accept-Language"
+          ],
+          "max_age": "12h",
+          "allow_credentials": false,
+          "debug": false,
+          "url_pattern": "/api/v3/pet/findByTags",
+          "encoding": "no-op",
+          "sd": "static",
+          "timeout": "3000ms",
+          "cache_ttl": "300s",
+          "host": [
+            "https://swagger-petstore-7rpm2ln3fa-uc.a.run.app"
+          ],
+          "disable_host_sanitize": false
+        }
+      },
+      "backend": [
+        {
+          "url_pattern": "/api/v3/pet/findByTags",
+          "encoding": "no-op",
+          "sd": "static",
+          "method": "GET",
+          "extra_config": {},
+          "host": [
+            "https://swagger-petstore-7rpm2ln3fa-uc.a.run.app"
+          ],
+          "cache_ttl": "300s"
+        }
+      ]
+    },
+    {
+      "endpoint": "/qap/pet/{petId}",
+      "method": "GET",
+      "output_encoding": "no-op",
+      "input_headers": [
+        "*"
+      ],
+      "input_query_strings": [],
+      "extra_config": {
+        "security/cors": {
+          "name": "{petId}",
+          "allow_origins": [
+            "*"
+          ],
+          "allow_methods": [
+            "GET",
+            "HEAD",
+            "POST"
+          ],
+          "expose_headers": [
+            "Content-Length",
+            "Content-Type"
+          ],
+          "allow_headers": [
+            "Accept-Language"
+          ],
+          "max_age": "12h",
+          "allow_credentials": false,
+          "debug": false,
+          "url_pattern": "/api/v3/pet/{petId}",
+          "encoding": "no-op",
+          "sd": "static",
+          "timeout": "3000ms",
+          "cache_ttl": "300s",
+          "host": [
+            "https://swagger-petstore-7rpm2ln3fa-uc.a.run.app"
+          ],
+          "disable_host_sanitize": false
+        }
+      },
+      "backend": [
+        {
+          "url_pattern": "/api/v3/pet/{petId}",
+          "encoding": "no-op",
+          "sd": "static",
+          "method": "GET",
+          "extra_config": {},
+          "host": [
+            "https://swagger-petstore-7rpm2ln3fa-uc.a.run.app"
+          ],
+          "cache_ttl": "300s"
+        }
+      ]
+    },
+    {
+      "endpoint": "/qap/pet/{petId}",
+      "method": "POST",
+      "output_encoding": "no-op",
+      "input_headers": [
+        "*"
+      ],
+      "input_query_strings": [
+        "name",
+        "status"
+      ],
+      "extra_config": {
+        "security/cors": {
+          "name": "{petId}",
+          "allow_origins": [
+            "*"
+          ],
+          "allow_methods": [
+            "GET",
+            "HEAD",
+            "POST"
+          ],
+          "expose_headers": [
+            "Content-Length",
+            "Content-Type"
+          ],
+          "allow_headers": [
+            "Accept-Language"
+          ],
+          "max_age": "12h",
+          "allow_credentials": false,
+          "debug": false,
+          "url_pattern": "/api/v3/pet/{petId}",
+          "encoding": "no-op",
+          "sd": "static",
+          "timeout": "3000ms",
+          "cache_ttl": "300s",
+          "host": [
+            "https://swagger-petstore-7rpm2ln3fa-uc.a.run.app"
+          ],
+          "disable_host_sanitize": false
+        }
+      },
+      "backend": [
+        {
+          "url_pattern": "/api/v3/pet/{petId}",
+          "encoding": "no-op",
+          "sd": "static",
+          "method": "POST",
+          "extra_config": {},
+          "host": [
+            "https://swagger-petstore-7rpm2ln3fa-uc.a.run.app"
+          ],
+          "cache_ttl": "300s"
+        }
+      ]
+    },
+    {
+      "endpoint": "/qap/pet/{petId}",
+      "method": "DELETE",
+      "output_encoding": "no-op",
+      "input_headers": [
+        "*"
+      ],
+      "input_query_strings": [],
+      "extra_config": {
+        "security/cors": {
+          "name": "{petId}",
+          "allow_origins": [
+            "*"
+          ],
+          "allow_methods": [
+            "GET",
+            "HEAD",
+            "POST"
+          ],
+          "expose_headers": [
+            "Content-Length",
+            "Content-Type"
+          ],
+          "allow_headers": [
+            "Accept-Language"
+          ],
+          "max_age": "12h",
+          "allow_credentials": false,
+          "debug": false,
+          "url_pattern": "/api/v3/pet/{petId}",
+          "encoding": "no-op",
+          "sd": "static",
+          "timeout": "3000ms",
+          "cache_ttl": "300s",
+          "host": [
+            "https://swagger-petstore-7rpm2ln3fa-uc.a.run.app"
+          ],
+          "disable_host_sanitize": false
+        }
+      },
+      "backend": [
+        {
+          "url_pattern": "/api/v3/pet/{petId}",
+          "encoding": "no-op",
+          "sd": "static",
+          "method": "DELETE",
+          "extra_config": {},
+          "host": [
+            "https://swagger-petstore-7rpm2ln3fa-uc.a.run.app"
+          ],
+          "cache_ttl": "300s"
+        }
+      ]
+    },
+    {
+      "endpoint": "/qap/pet/{petId}/uploadImage",
+      "method": "POST",
+      "output_encoding": "no-op",
+      "input_headers": [
+        "*"
+      ],
+      "input_query_strings": [
+        "additionalMetadata"
+      ],
+      "extra_config": {
+        "security/cors": {
+          "name": "uploadImage",
+          "allow_origins": [
+            "*"
+          ],
+          "allow_methods": [
+            "GET",
+            "HEAD",
+            "POST"
+          ],
+          "expose_headers": [
+            "Content-Length",
+            "Content-Type"
+          ],
+          "allow_headers": [
+            "Accept-Language"
+          ],
+          "max_age": "12h",
+          "allow_credentials": false,
+          "debug": false,
+          "url_pattern": "/api/v3/pet/{petId}/uploadImage",
+          "encoding": "no-op",
+          "sd": "static",
+          "timeout": "3000ms",
+          "cache_ttl": "300s",
+          "host": [
+            "https://swagger-petstore-7rpm2ln3fa-uc.a.run.app"
+          ],
+          "disable_host_sanitize": false
+        }
+      },
+      "backend": [
+        {
+          "url_pattern": "/api/v3/pet/{petId}/uploadImage",
+          "encoding": "no-op",
+          "sd": "static",
+          "method": "POST",
+          "extra_config": {},
+          "host": [
+            "https://swagger-petstore-7rpm2ln3fa-uc.a.run.app"
+          ],
+          "cache_ttl": "300s"
+        }
+      ]
+    },
+    {
+      "endpoint": "/qap/store/inventory",
+      "method": "GET",
+      "output_encoding": "no-op",
+      "input_headers": [
+        "*"
+      ],
+      "input_query_strings": [],
+      "extra_config": {
+        "security/cors": {
+          "name": "inventory",
+          "allow_origins": [
+            "*"
+          ],
+          "allow_methods": [
+            "GET",
+            "HEAD",
+            "POST"
+          ],
+          "expose_headers": [
+            "Content-Length",
+            "Content-Type"
+          ],
+          "allow_headers": [
+            "Accept-Language"
+          ],
+          "max_age": "12h",
+          "allow_credentials": false,
+          "debug": false,
+          "url_pattern": "/api/v3/store/inventory",
+          "encoding": "no-op",
+          "sd": "static",
+          "timeout": "3000ms",
+          "cache_ttl": "300s",
+          "host": [
+            "https://swagger-petstore-7rpm2ln3fa-uc.a.run.app"
+          ],
+          "disable_host_sanitize": false
+        }
+      },
+      "backend": [
+        {
+          "url_pattern": "/api/v3/store/inventory",
+          "encoding": "no-op",
+          "sd": "static",
+          "method": "GET",
+          "extra_config": {},
+          "host": [
+            "https://swagger-petstore-7rpm2ln3fa-uc.a.run.app"
+          ],
+          "cache_ttl": "300s"
+        }
+      ]
+    },
+    {
+      "endpoint": "/qap/store/order",
+      "method": "POST",
+      "output_encoding": "no-op",
+      "input_headers": [
+        "*"
+      ],
+      "input_query_strings": [],
+      "extra_config": {
+        "security/cors": {
+          "name": "order",
+          "allow_origins": [
+            "*"
+          ],
+          "allow_methods": [
+            "GET",
+            "HEAD",
+            "POST"
+          ],
+          "expose_headers": [
+            "Content-Length",
+            "Content-Type"
+          ],
+          "allow_headers": [
+            "Accept-Language"
+          ],
+          "max_age": "12h",
+          "allow_credentials": false,
+          "debug": false,
+          "url_pattern": "/api/v3/store/order",
+          "encoding": "no-op",
+          "sd": "static",
+          "timeout": "3000ms",
+          "cache_ttl": "300s",
+          "host": [
+            "https://swagger-petstore-7rpm2ln3fa-uc.a.run.app"
+          ],
+          "disable_host_sanitize": false
+        }
+      },
+      "backend": [
+        {
+          "url_pattern": "/api/v3/store/order",
+          "encoding": "no-op",
+          "sd": "static",
+          "method": "POST",
+          "extra_config": {},
+          "host": [
+            "https://swagger-petstore-7rpm2ln3fa-uc.a.run.app"
+          ],
+          "cache_ttl": "300s"
+        }
+      ]
+    }
+  ]
+}
