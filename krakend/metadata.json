@@ -1,0 +1,12 @@
+{
+  "workspace": {
+    "name": "workspaces-v10",
+    "description": "Test",
+    "dockerRegistry": "gitHub-package-registry"
+  },
+  "environment": {
+    "repository": "QAP-Staging.git",
+    "gitUsername": "CrystianP-Company"
+  },
+  "variables": []
+}
