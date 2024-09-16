@@ -1,0 +1,160 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "API-QA",
+    "description": "sfdss",
+    "version": "0.1.9"
+  },
+  "servers": [
+    {
+      "url": "/",
+      "description": "Main (production) server"
+    },
+    {
+      "url": "https://qap-sand-workspace-pipeline-test-qfm4nbgbkq-uc.a.run.app",
+      "description": "Internal test server"
+    }
+  ],
+  "tags": [],
+  "paths": {
+    "openapi": "3.0.0",
+    "info": {
+      "title": "API-QA",
+      "description": "sfdss",
+      "version": "0.1.9"
+    },
+    "servers": [
+      {
+        "url": "/",
+        "description": "Main (production) server"
+      },
+      {
+        "url": "https://qap-sand-workspace-pipeline-test-qfm4nbgbkq-uc.a.run.app",
+        "description": "Internal test server"
+      }
+    ],
+    "tags": [],
+    "paths": {
+      "openapi": "3.0.0",
+      "info": {
+        "title": "API-QA",
+        "description": "sfdss",
+        "version": "0.1.9"
+      },
+      "servers": [
+        {
+          "url": "/",
+          "description": "Main (production) server"
+        },
+        {
+          "url": "https://qap-sand-workspace-pipeline-test-qfm4nbgbkq-uc.a.run.app",
+          "description": "Internal test server"
+        }
+      ],
+      "tags": [],
+      "paths": {
+        "openapi": "3.0.0",
+        "info": {
+          "title": "API-QA",
+          "description": "sfdss",
+          "version": "0.1.9"
+        },
+        "servers": [
+          {
+            "url": "/",
+            "description": "Main (production) server"
+          },
+          {
+            "url": "https://qap-sand-workspace-pipeline-test-qfm4nbgbkq-uc.a.run.app",
+            "description": "Internal test server"
+          }
+        ],
+        "tags": [],
+        "paths": {
+          "/api_test_delete/billings": {
+            "get": {
+              "summary": "Endpoint",
+              "responses": {
+                "200": {
+                  "description": "Successful Response",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "type": "object"
+                      }
+                    }
+                  }
+                }
+              },
+              "parameters": []
+            }
+          }
+        },
+        "components": {
+          "schemas": {},
+          "requestBodies": {},
+          "securitySchemes": {
+            "bearerAuth": {
+              "type": "http",
+              "scheme": "bearer",
+              "bearerFormat": "JWT"
+            }
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      },
+      "components": {
+        "schemas": {},
+        "requestBodies": {},
+        "securitySchemes": {
+          "bearerAuth": {
+            "type": "http",
+            "scheme": "bearer",
+            "bearerFormat": "JWT"
+          }
+        }
+      },
+      "security": [
+        {
+          "bearerAuth": []
+        }
+      ]
+    },
+    "components": {
+      "schemas": {},
+      "requestBodies": {},
+      "securitySchemes": {
+        "bearerAuth": {
+          "type": "http",
+          "scheme": "bearer",
+          "bearerFormat": "JWT"
+        }
+      }
+    },
+    "security": [
+      {
+        "bearerAuth": []
+      }
+    ]
+  },
+  "components": {
+    "schemas": {},
+    "requestBodies": {},
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    }
+  },
+  "security": [
+    {
+      "bearerAuth": []
+    }
+  ]
+}
