@@ -1,0 +1,12 @@
+{
+  "workspace": {
+    "name": "workspace v38-rc",
+    "description": "trs",
+    "dockerRegistry": "gitHub-package-registry"
+  },
+  "environment": {
+    "repository": "QAP-Staging.git",
+    "gitUsername": "CrystianP-Company"
+  },
+  "variables": []
+}
