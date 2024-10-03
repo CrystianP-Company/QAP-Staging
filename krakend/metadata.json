@@ -1,0 +1,12 @@
+{
+  "workspace": {
+    "name": "workspace v1-rc khalil",
+    "description": "xvxcvxc",
+    "dockerRegistry": "azure-container-registry"
+  },
+  "environment": {
+    "repository": "QAP-Staging.git",
+    "gitUsername": "CrystianP-Company"
+  },
+  "variables": []
+}
