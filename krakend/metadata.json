@@ -1,0 +1,12 @@
+{
+  "workspace": {
+    "name": "workspace v20-rc",
+    "description": "sdasda",
+    "dockerRegistry": "google-artifact-registry"
+  },
+  "environment": {
+    "repository": "QAP-Staging.git",
+    "gitUsername": "CrystianP-Company"
+  },
+  "variables": []
+}
