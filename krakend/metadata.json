@@ -1,0 +1,12 @@
+{
+  "workspace": {
+    "name": "workspace v5-rc",
+    "description": "Test",
+    "dockerRegistry": "dockerHub-private-repo"
+  },
+  "environment": {
+    "repository": "QAP-Staging.git",
+    "gitUsername": "CrystianP-Company"
+  },
+  "variables": []
+}
