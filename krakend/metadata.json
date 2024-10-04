@@ -1,0 +1,12 @@
+{
+  "workspace": {
+    "name": "workspace v30-rc",
+    "description": "tstas",
+    "dockerRegistry": "dockerHub-private-repo"
+  },
+  "environment": {
+    "repository": "QAP-Staging.git",
+    "gitUsername": "CrystianP-Company"
+  },
+  "variables": []
+}
