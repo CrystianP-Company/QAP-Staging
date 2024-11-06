@@ -1,0 +1,552 @@
+{
+  "version": 3,
+  "name": "API-GRITEC",
+  "timeout": "5000ms",
+  "cache_ttl": "300s",
+  "output_encoding": "no-op",
+  "port": 3890,
+  "endpoints": [
+    {
+      "endpoint": "/api-gritec/municipios/{codigoIBGE}",
+      "method": "GET",
+      "output_encoding": "no-op",
+      "input_headers": [
+        "*"
+      ],
+      "input_query_strings": [],
+      "extra_config": {
+        "security/cors": {
+          "name": "{codigoIBGE}",
+          "allow_origins": [
+            "*"
+          ],
+          "allow_methods": [
+            "GET",
+            "HEAD",
+            "POST"
+          ],
+          "expose_headers": [
+            "Content-Length",
+            "Content-Type"
+          ],
+          "allow_headers": [
+            "Accept-Language"
+          ],
+          "max_age": "12h",
+          "allow_credentials": false,
+          "debug": false,
+          "url_pattern": "/agritec/v2/municipios/{codigoIBGE}",
+          "encoding": "no-op",
+          "sd": "static",
+          "timeout": "3000ms",
+          "cache_ttl": "300s",
+          "disable_host_sanitize": false
+        }
+      },
+      "backend": [
+        {
+          "url_pattern": "/agritec/v2/municipios/{codigoIBGE}",
+          "encoding": "no-op",
+          "sd": "static",
+          "method": "GET",
+          "extra_config": {},
+          "host": [
+            "https://api.cnptia.embrapa.br",
+            "http://api.cnptia.embrapa.br"
+          ],
+          "cache_ttl": "300s"
+        }
+      ]
+    },
+    {
+      "endpoint": "/api-gritec/municipios",
+      "method": "GET",
+      "output_encoding": "no-op",
+      "input_headers": [
+        "*"
+      ],
+      "input_query_strings": [
+        "uf",
+        "dataAtualizacao"
+      ],
+      "extra_config": {
+        "security/cors": {
+          "name": "municipios",
+          "allow_origins": [
+            "*"
+          ],
+          "allow_methods": [
+            "GET",
+            "HEAD",
+            "POST"
+          ],
+          "expose_headers": [
+            "Content-Length",
+            "Content-Type"
+          ],
+          "allow_headers": [
+            "Accept-Language"
+          ],
+          "max_age": "12h",
+          "allow_credentials": false,
+          "debug": false,
+          "url_pattern": "/agritec/v2/municipios",
+          "encoding": "no-op",
+          "sd": "static",
+          "timeout": "3000ms",
+          "cache_ttl": "300s",
+          "disable_host_sanitize": false
+        }
+      },
+      "backend": [
+        {
+          "url_pattern": "/agritec/v2/municipios",
+          "encoding": "no-op",
+          "sd": "static",
+          "method": "GET",
+          "extra_config": {},
+          "host": [
+            "https://api.cnptia.embrapa.br",
+            "http://api.cnptia.embrapa.br"
+          ],
+          "cache_ttl": "300s"
+        }
+      ]
+    },
+    {
+      "endpoint": "/api-gritec/safra-atual",
+      "method": "GET",
+      "output_encoding": "no-op",
+      "input_headers": [
+        "*"
+      ],
+      "input_query_strings": [],
+      "extra_config": {
+        "security/cors": {
+          "name": "safra-atual",
+          "allow_origins": [
+            "*"
+          ],
+          "allow_methods": [
+            "GET",
+            "HEAD",
+            "POST"
+          ],
+          "expose_headers": [
+            "Content-Length",
+            "Content-Type"
+          ],
+          "allow_headers": [
+            "Accept-Language"
+          ],
+          "max_age": "12h",
+          "allow_credentials": false,
+          "debug": false,
+          "url_pattern": "/agritec/v2/safra-atual",
+          "encoding": "no-op",
+          "sd": "static",
+          "timeout": "3000ms",
+          "cache_ttl": "300s",
+          "disable_host_sanitize": false
+        }
+      },
+      "backend": [
+        {
+          "url_pattern": "/agritec/v2/safra-atual",
+          "encoding": "no-op",
+          "sd": "static",
+          "method": "GET",
+          "extra_config": {},
+          "host": [
+            "https://api.cnptia.embrapa.br",
+            "http://api.cnptia.embrapa.br"
+          ],
+          "cache_ttl": "300s"
+        }
+      ]
+    },
+    {
+      "endpoint": "/api-gritec/produtividade",
+      "method": "GET",
+      "output_encoding": "no-op",
+      "input_headers": [
+        "*"
+      ],
+      "input_query_strings": [
+        "idCultura",
+        "idCultivar",
+        "codigoIBGE",
+        "cad",
+        "dataPlantio",
+        "expectativaProdutividade",
+        "latitude",
+        "longitude"
+      ],
+      "extra_config": {
+        "security/cors": {
+          "name": "produtividade",
+          "allow_origins": [
+            "*"
+          ],
+          "allow_methods": [
+            "GET",
+            "HEAD",
+            "POST"
+          ],
+          "expose_headers": [
+            "Content-Length",
+            "Content-Type"
+          ],
+          "allow_headers": [
+            "Accept-Language"
+          ],
+          "max_age": "12h",
+          "allow_credentials": false,
+          "debug": false,
+          "url_pattern": "/agritec/v2/produtividade",
+          "encoding": "no-op",
+          "sd": "static",
+          "timeout": "3000ms",
+          "cache_ttl": "300s",
+          "disable_host_sanitize": false
+        }
+      },
+      "backend": [
+        {
+          "url_pattern": "/agritec/v2/produtividade",
+          "encoding": "no-op",
+          "sd": "static",
+          "method": "GET",
+          "extra_config": {},
+          "host": [
+            "https://api.cnptia.embrapa.br",
+            "http://api.cnptia.embrapa.br"
+          ],
+          "cache_ttl": "300s"
+        }
+      ]
+    },
+    {
+      "endpoint": "/api-gritec/zoneamento",
+      "method": "GET",
+      "output_encoding": "no-op",
+      "input_headers": [
+        "*"
+      ],
+      "input_query_strings": [
+        "idCultura",
+        "codigoIBGE",
+        "risco"
+      ],
+      "extra_config": {
+        "security/cors": {
+          "name": "zoneamento",
+          "allow_origins": [
+            "*"
+          ],
+          "allow_methods": [
+            "GET",
+            "HEAD",
+            "POST"
+          ],
+          "expose_headers": [
+            "Content-Length",
+            "Content-Type"
+          ],
+          "allow_headers": [
+            "Accept-Language"
+          ],
+          "max_age": "12h",
+          "allow_credentials": false,
+          "debug": false,
+          "url_pattern": "/agritec/v2/zoneamento",
+          "encoding": "no-op",
+          "sd": "static",
+          "timeout": "3000ms",
+          "cache_ttl": "300s",
+          "disable_host_sanitize": false
+        }
+      },
+      "backend": [
+        {
+          "url_pattern": "/agritec/v2/zoneamento",
+          "encoding": "no-op",
+          "sd": "static",
+          "method": "GET",
+          "extra_config": {},
+          "host": [
+            "https://api.cnptia.embrapa.br",
+            "http://api.cnptia.embrapa.br"
+          ],
+          "cache_ttl": "300s"
+        }
+      ]
+    },
+    {
+      "endpoint": "/api-gritec/obtentores",
+      "method": "GET",
+      "output_encoding": "no-op",
+      "input_headers": [
+        "*"
+      ],
+      "input_query_strings": [
+        "safra",
+        "idCultura",
+        "uf",
+        "grupo",
+        "dataAtualizacao"
+      ],
+      "extra_config": {
+        "security/cors": {
+          "name": "obtentores",
+          "allow_origins": [
+            "*"
+          ],
+          "allow_methods": [
+            "GET",
+            "HEAD",
+            "POST"
+          ],
+          "expose_headers": [
+            "Content-Length",
+            "Content-Type"
+          ],
+          "allow_headers": [
+            "Accept-Language"
+          ],
+          "max_age": "12h",
+          "allow_credentials": false,
+          "debug": false,
+          "url_pattern": "/agritec/v2/obtentores",
+          "encoding": "no-op",
+          "sd": "static",
+          "timeout": "3000ms",
+          "cache_ttl": "300s",
+          "disable_host_sanitize": false
+        }
+      },
+      "backend": [
+        {
+          "url_pattern": "/agritec/v2/obtentores",
+          "encoding": "no-op",
+          "sd": "static",
+          "method": "GET",
+          "extra_config": {},
+          "host": [
+            "https://api.cnptia.embrapa.br",
+            "http://api.cnptia.embrapa.br"
+          ],
+          "cache_ttl": "300s"
+        }
+      ]
+    },
+    {
+      "endpoint": "/api-gritec/health",
+      "method": "GET",
+      "output_encoding": "no-op",
+      "input_headers": [
+        "*"
+      ],
+      "input_query_strings": [],
+      "extra_config": {
+        "security/cors": {
+          "name": "health",
+          "allow_origins": [
+            "*"
+          ],
+          "allow_methods": [
+            "GET",
+            "HEAD",
+            "POST"
+          ],
+          "expose_headers": [
+            "Content-Length",
+            "Content-Type"
+          ],
+          "allow_headers": [
+            "Accept-Language"
+          ],
+          "max_age": "12h",
+          "allow_credentials": false,
+          "debug": false,
+          "url_pattern": "/agritec/v2/health",
+          "encoding": "no-op",
+          "sd": "static",
+          "timeout": "3000ms",
+          "cache_ttl": "300s",
+          "disable_host_sanitize": false
+        }
+      },
+      "backend": [
+        {
+          "url_pattern": "/agritec/v2/health",
+          "encoding": "no-op",
+          "sd": "static",
+          "method": "GET",
+          "extra_config": {},
+          "host": [
+            "https://api.cnptia.embrapa.br",
+            "http://api.cnptia.embrapa.br"
+          ],
+          "cache_ttl": "300s"
+        }
+      ]
+    },
+    {
+      "endpoint": "/api-gritec/culturas",
+      "method": "GET",
+      "output_encoding": "no-op",
+      "input_headers": [
+        "*"
+      ],
+      "input_query_strings": [],
+      "extra_config": {
+        "security/cors": {
+          "name": "culturas",
+          "allow_origins": [
+            "*"
+          ],
+          "allow_methods": [
+            "GET",
+            "HEAD",
+            "POST"
+          ],
+          "expose_headers": [
+            "Content-Length",
+            "Content-Type"
+          ],
+          "allow_headers": [
+            "Accept-Language"
+          ],
+          "max_age": "12h",
+          "allow_credentials": false,
+          "debug": false,
+          "url_pattern": "/agritec/v2/culturas",
+          "encoding": "no-op",
+          "sd": "static",
+          "timeout": "3000ms",
+          "cache_ttl": "300s",
+          "disable_host_sanitize": false
+        }
+      },
+      "backend": [
+        {
+          "url_pattern": "/agritec/v2/culturas",
+          "encoding": "no-op",
+          "sd": "static",
+          "method": "GET",
+          "extra_config": {},
+          "host": [
+            "https://api.cnptia.embrapa.br",
+            "http://api.cnptia.embrapa.br"
+          ],
+          "cache_ttl": "300s"
+        }
+      ]
+    },
+    {
+      "endpoint": "/api-gritec/culturas/{id}/safra-atual",
+      "method": "GET",
+      "output_encoding": "no-op",
+      "input_headers": [
+        "*"
+      ],
+      "input_query_strings": [],
+      "extra_config": {
+        "security/cors": {
+          "name": "safra-atual",
+          "allow_origins": [
+            "*"
+          ],
+          "allow_methods": [
+            "GET",
+            "HEAD",
+            "POST"
+          ],
+          "expose_headers": [
+            "Content-Length",
+            "Content-Type"
+          ],
+          "allow_headers": [
+            "Accept-Language"
+          ],
+          "max_age": "12h",
+          "allow_credentials": false,
+          "debug": false,
+          "url_pattern": "/agritec/v2/culturas/{id}/safra-atual",
+          "encoding": "no-op",
+          "sd": "static",
+          "timeout": "3000ms",
+          "cache_ttl": "300s",
+          "disable_host_sanitize": false
+        }
+      },
+      "backend": [
+        {
+          "url_pattern": "/agritec/v2/culturas/{id}/safra-atual",
+          "encoding": "no-op",
+          "sd": "static",
+          "method": "GET",
+          "extra_config": {},
+          "host": [
+            "https://api.cnptia.embrapa.br",
+            "http://api.cnptia.embrapa.br"
+          ],
+          "cache_ttl": "300s"
+        }
+      ]
+    },
+    {
+      "endpoint": "/api-gritec/cultivares/{id}",
+      "method": "GET",
+      "output_encoding": "no-op",
+      "input_headers": [
+        "*"
+      ],
+      "input_query_strings": [],
+      "extra_config": {
+        "security/cors": {
+          "name": "{id}",
+          "allow_origins": [
+            "*"
+          ],
+          "allow_methods": [
+            "GET",
+            "HEAD",
+            "POST"
+          ],
+          "expose_headers": [
+            "Content-Length",
+            "Content-Type"
+          ],
+          "allow_headers": [
+            "Accept-Language"
+          ],
+          "max_age": "12h",
+          "allow_credentials": false,
+          "debug": false,
+          "url_pattern": "/agritec/v2/cultivares/{id}",
+          "encoding": "no-op",
+          "sd": "static",
+          "timeout": "3000ms",
+          "cache_ttl": "300s",
+          "disable_host_sanitize": false
+        }
+      },
+      "backend": [
+        {
+          "url_pattern": "/agritec/v2/cultivares/{id}",
+          "encoding": "no-op",
+          "sd": "static",
+          "method": "GET",
+          "extra_config": {},
+          "host": [
+            "https://api.cnptia.embrapa.br",
+            "http://api.cnptia.embrapa.br"
+          ],
+          "cache_ttl": "300s"
+        }
+      ]
+    }
+  ]
+}
