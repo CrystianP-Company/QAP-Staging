@@ -1,0 +1,12 @@
+{
+  "workspace": {
+    "name": "workspace plugin",
+    "description": "Workspace deploy plugin",
+    "dockerRegistry": "gitHub-package-registry"
+  },
+  "environment": {
+    "repository": "QAP-Staging.git",
+    "gitUsername": "CrystianP-Company"
+  },
+  "variables": []
+}
