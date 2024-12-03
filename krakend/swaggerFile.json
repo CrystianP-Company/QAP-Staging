@@ -1,0 +1,73 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "API Scratch",
+    "description": "Des",
+    "version": "0.1.9"
+  },
+  "servers": [
+    {
+      "url": "https://example.io/v1",
+      "description": "Main (production) server"
+    },
+    {
+      "url": "https://example.io/v1",
+      "description": "Internal test server"
+    }
+  ],
+  "tags": [],
+  "paths": {
+    "/api-s/rhavi": {
+      "get": {
+        "summary": "Endpoint",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": []
+      }
+    },
+    "/api-s/noah": {
+      "get": {
+        "summary": "Endpoint",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": []
+      }
+    }
+  },
+  "components": {
+    "schemas": {},
+    "requestBodies": {},
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    }
+  },
+  "security": [
+    {
+      "bearerAuth": []
+    }
+  ]
+}
