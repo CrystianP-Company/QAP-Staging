@@ -1,0 +1,211 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "AgroTermos",
+    "description": "Este documento apresenta as especificações e formas de uso das APIs para consumo dos serviços disponibilizados no Web Service do Agrotermos. Uma versão Web dos serviços pode ser vista em [Agrotermos Web](https://sistemas.sede.embrapa.br/agrotermos).",
+    "version": "v1"
+  },
+  "servers": [
+    {
+      "url": "/",
+      "description": "Main (production) server"
+    },
+    {
+      "url": "/",
+      "description": "Internal test server"
+    }
+  ],
+  "tags": [
+    {
+      "name": "termo",
+      "description": "Consulta aos termos e/ou conceitos do Agrotermos com nome exato (idêntico)."
+    },
+    {
+      "name": "termoParcial",
+      "description": "Consulta aos termos e/ou conceitos do Agrotermos de forma parcial (não idêntica)."
+    },
+    {
+      "name": "termoById",
+      "description": "Consulta a um termo e/ou conceito específico do Agrotermos."
+    },
+    {
+      "name": "termoComRelacoes",
+      "description": "Consulta de termos e/ou conceitos e seus relacionamentos com outros termos e/ou conceitos."
+    },
+    {
+      "name": "relacoes",
+      "description": "Consulta das relações disponíveis no Agrotermos."
+    },
+    {
+      "name": "relacao",
+      "description": "Consulta a uma relação específica do Agrotermos."
+    }
+  ],
+  "paths": {
+    "openapi": "3.0.1",
+    "info": {
+      "title": "AgroTermos",
+      "description": "Este documento apresenta as especificações e formas de uso das APIs para consumo dos serviços disponibilizados no Web Service do Agrotermos. Uma versão Web dos serviços pode ser vista em [Agrotermos Web](https://sistemas.sede.embrapa.br/agrotermos).",
+      "version": "v1"
+    },
+    "servers": [
+      {
+        "url": "/",
+        "description": "Main (production) server"
+      },
+      {
+        "url": "/",
+        "description": "Internal test server"
+      }
+    ],
+    "tags": [
+      {
+        "name": "termo",
+        "description": "Consulta aos termos e/ou conceitos do Agrotermos com nome exato (idêntico)."
+      },
+      {
+        "name": "termoParcial",
+        "description": "Consulta aos termos e/ou conceitos do Agrotermos de forma parcial (não idêntica)."
+      },
+      {
+        "name": "termoById",
+        "description": "Consulta a um termo e/ou conceito específico do Agrotermos."
+      },
+      {
+        "name": "termoComRelacoes",
+        "description": "Consulta de termos e/ou conceitos e seus relacionamentos com outros termos e/ou conceitos."
+      },
+      {
+        "name": "relacoes",
+        "description": "Consulta das relações disponíveis no Agrotermos."
+      },
+      {
+        "name": "relacao",
+        "description": "Consulta a uma relação específica do Agrotermos."
+      }
+    ],
+    "paths": {
+      "openapi": "3.0.1",
+      "info": {
+        "title": "AgroTermos",
+        "description": "Este documento apresenta as especificações e formas de uso das APIs para consumo dos serviços disponibilizados no Web Service do Agrotermos. Uma versão Web dos serviços pode ser vista em [Agrotermos Web](https://sistemas.sede.embrapa.br/agrotermos).",
+        "version": "v1"
+      },
+      "servers": [
+        {
+          "url": "/",
+          "description": "Main (production) server"
+        },
+        {
+          "url": "/",
+          "description": "Internal test server"
+        }
+      ],
+      "tags": [
+        {
+          "name": "termo",
+          "description": "Consulta aos termos e/ou conceitos do Agrotermos com nome exato (idêntico)."
+        },
+        {
+          "name": "termoParcial",
+          "description": "Consulta aos termos e/ou conceitos do Agrotermos de forma parcial (não idêntica)."
+        },
+        {
+          "name": "termoById",
+          "description": "Consulta a um termo e/ou conceito específico do Agrotermos."
+        },
+        {
+          "name": "termoComRelacoes",
+          "description": "Consulta de termos e/ou conceitos e seus relacionamentos com outros termos e/ou conceitos."
+        },
+        {
+          "name": "relacoes",
+          "description": "Consulta das relações disponíveis no Agrotermos."
+        },
+        {
+          "name": "relacao",
+          "description": "Consulta a uma relação específica do Agrotermos."
+        }
+      ],
+      "paths": {
+        "/agrotermos/termoById": {
+          "get": {
+            "tags": [
+              "termoById"
+            ],
+            "summary": "Consulta de termos e/ou conceitos pelo identificador (ID) único",
+            "description": "Retorna os termos e/ou conceitos pelo identificador (ID) pesquisado.",
+            "parameters": [
+              {
+                "name": "id",
+                "in": "query",
+                "description": "Identificador do termo ou conceito para consulta.",
+                "required": true,
+                "schema": {
+                  "type": "string"
+                }
+              }
+            ],
+            "responses": {
+              "200": {
+                "description": "Consuta com sucesso.",
+                "content": {}
+              },
+              "404": {
+                "description": "Erro na consulta.",
+                "content": {}
+              }
+            },
+            "x-auth-type": "Application & Application User",
+            "x-throttling-tier": "Unlimited"
+          }
+        }
+      },
+      "components": {
+        "securitySchemes": {
+          "bearerAuth": {
+            "type": "http",
+            "scheme": "bearer",
+            "bearerFormat": "JWT"
+          }
+        }
+      },
+      "x-original-swagger-version": "2.0",
+      "security": [
+        {
+          "bearerAuth": []
+        }
+      ]
+    },
+    "components": {
+      "securitySchemes": {
+        "bearerAuth": {
+          "type": "http",
+          "scheme": "bearer",
+          "bearerFormat": "JWT"
+        }
+      }
+    },
+    "x-original-swagger-version": "2.0",
+    "security": [
+      {
+        "bearerAuth": []
+      }
+    ]
+  },
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    }
+  },
+  "x-original-swagger-version": "2.0",
+  "security": [
+    {
+      "bearerAuth": []
+    }
+  ]
+}
