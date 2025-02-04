@@ -1,0 +1,146 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Numbers API",
+    "description": "Retrieve trivia about a specific number.",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://qap-workspace-pipeline-test-qfm4nbgbkq-uc.a.run.app",
+      "description": "Main (production) server"
+    },
+    {
+      "url": "http://numbersapi.comhttps://qap-workspace-pipeline-test-qfm4nbgbkq-uc.a.run.app",
+      "description": "Internal test server"
+    }
+  ],
+  "paths": {
+    "openapi": "3.0.0",
+    "info": {
+      "title": "Numbers API",
+      "description": "Retrieve trivia about a specific number.",
+      "version": "1.0.0"
+    },
+    "servers": [
+      {
+        "url": "https://qap-workspace-pipeline-test-qfm4nbgbkq-uc.a.run.app",
+        "description": "Main (production) server"
+      },
+      {
+        "url": "http://numbersapi.comhttps://qap-workspace-pipeline-test-qfm4nbgbkq-uc.a.run.app",
+        "description": "Internal test server"
+      }
+    ],
+    "paths": {
+      "/api-numbers-needs_remove_from_the_path_extra_slash/{number}": {
+        "get": {
+          "summary": "Get trivia for a number",
+          "description": "Retrieve a trivia fact about the specified number.",
+          "parameters": [
+            {
+              "name": "number",
+              "in": "path",
+              "required": true,
+              "description": "The number to retrieve trivia for (e.g., '42' or 'random').",
+              "schema": {
+                "type": "string",
+                "example": "42"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Trivia fact about the number.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "text": {
+                        "type": "string",
+                        "description": "Trivia fact about the number."
+                      },
+                      "number": {
+                        "type": "integer",
+                        "description": "The number the trivia fact is about."
+                      },
+                      "found": {
+                        "type": "boolean",
+                        "description": "Indicates if a fact was found for the number."
+                      },
+                      "type": {
+                        "type": "string",
+                        "description": "Type of fact (e.g., 'trivia')."
+                      }
+                    }
+                  },
+                  "examples": {
+                    "example-1": {
+                      "summary": "Example trivia for 42",
+                      "value": {
+                        "text": "42 is the answer to the ultimate question of life, the universe, and everything.",
+                        "number": 42,
+                        "found": true,
+                        "type": "trivia"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "Number not found."
+            }
+          }
+        }
+      },
+      "/api-numbers-needs_remove_from_the_path_extra_slash": {
+        "get": {
+          "summary": "Endpoint",
+          "responses": {
+            "200": {
+              "description": "Successful Response",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object"
+                  }
+                }
+              }
+            }
+          },
+          "parameters": []
+        }
+      }
+    },
+    "components": {
+      "securitySchemes": {
+        "bearerAuth": {
+          "type": "http",
+          "scheme": "bearer",
+          "bearerFormat": "JWT"
+        }
+      }
+    },
+    "security": [
+      {
+        "bearerAuth": []
+      }
+    ]
+  },
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    }
+  },
+  "security": [
+    {
+      "bearerAuth": []
+    }
+  ]
+}

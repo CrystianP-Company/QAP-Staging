@@ -1,0 +1,12 @@
+{
+  "workspace": {
+    "name": "New route",
+    "description": "dd",
+    "dockerRegistry": "amazon-elastic-container-registry"
+  },
+  "environment": {
+    "repository": "QAP-Staging.git",
+    "gitUsername": "CrystianP-Company"
+  },
+  "variables": []
+}
