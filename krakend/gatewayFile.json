@@ -1,0 +1,9 @@
+{
+  "version": 3,
+  "name": "1Password Connect",
+  "timeout": "5000ms",
+  "cache_ttl": "300s",
+  "output_encoding": "json",
+  "port": 3890,
+  "endpoints": []
+}
