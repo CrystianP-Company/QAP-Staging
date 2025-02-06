@@ -1,0 +1,12 @@
+{
+  "workspace": {
+    "name": "test-billing",
+    "description": "test-billing",
+    "dockerRegistry": "gitHub-package-registry"
+  },
+  "environment": {
+    "repository": "QAP-Staging.git",
+    "gitUsername": "CrystianP-Company"
+  },
+  "variables": []
+}
