@@ -1,0 +1,11 @@
+{
+  "workspace": {
+    "name": "1Password Connect",
+    "description": "Update 2",
+    "registrySource": "GITHUB-PACKAGE-REGISTRY"
+  },
+  "environment": {
+    "repository": "QAP-Staging.git",
+    "gitUsername": "CrystianP-Company"
+  }
+}
