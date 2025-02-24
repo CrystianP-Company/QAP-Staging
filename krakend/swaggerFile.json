@@ -1,0 +1,86 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "API-Breaking Bad Quotes",
+    "description": "Quotes from Breaking Bad series.",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "/",
+      "description": "Main (production) server"
+    },
+    {
+      "url": "https://api.breakingbadquotes.xyz",
+      "description": "Internal test server"
+    }
+  ],
+  "paths": {
+    "openapi": "3.0.0",
+    "info": {
+      "title": "API-Breaking Bad Quotes",
+      "description": "Quotes from Breaking Bad series.",
+      "version": "1.0.0"
+    },
+    "servers": [
+      {
+        "url": "/",
+        "description": "Main (production) server"
+      },
+      {
+        "url": "/",
+        "description": "Internal test server"
+      }
+    ],
+    "paths": {
+      "/api-breaking_bad_quotes/v1/quotes/": {
+        "get": {
+          "summary": "Get data from Breaking Bad Quotes API",
+          "description": "Fetch data using the Breaking Bad Quotes API API.",
+          "responses": {
+            "200": {
+              "description": "Response from Breaking Bad Quotes API API",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "additionalProperties": true
+                  }
+                }
+              }
+            }
+          },
+          "parameters": []
+        }
+      }
+    },
+    "components": {
+      "securitySchemes": {
+        "bearerAuth": {
+          "type": "http",
+          "scheme": "bearer",
+          "bearerFormat": "JWT"
+        }
+      }
+    },
+    "security": [
+      {
+        "bearerAuth": []
+      }
+    ]
+  },
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    }
+  },
+  "security": [
+    {
+      "bearerAuth": []
+    }
+  ]
+}

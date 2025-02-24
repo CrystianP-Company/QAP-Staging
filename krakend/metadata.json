@@ -1,0 +1,12 @@
+{
+  "workspace": {
+    "name": "Workspace Breaking Bad",
+    "description": "Breaking Bad",
+    "dockerRegistry": "gitHub-package-registry"
+  },
+  "environment": {
+    "repository": "QAP-Staging.git",
+    "gitUsername": "CrystianP-Company"
+  },
+  "variables": []
+}

@@ -1,0 +1,78 @@
+{
+  "version": 3,
+  "timeout": "5000ms",
+  "cache_ttl": "300s",
+  "output_encoding": "no-op",
+  "port": 3890,
+  "plugin": {
+    "pattern": ".so",
+    "folder": "/etc/plugins/"
+  },
+  "endpoints": [
+    {
+      "endpoint": "/api-breaking_bad_quotes/v1/quotes/",
+      "method": "GET",
+      "output_encoding": "no-op",
+      "input_headers": [
+        "*"
+      ],
+      "input_query_strings": [],
+      "extra_config": {
+        "security/cors": {
+          "name": "",
+          "allow_origins": [
+            "*"
+          ],
+          "allow_methods": [
+            "GET",
+            "HEAD",
+            "POST"
+          ],
+          "expose_headers": [
+            "Content-Length",
+            "Content-Type"
+          ],
+          "allow_headers": [
+            "Accept-Language"
+          ],
+          "max_age": "12h",
+          "allow_credentials": false,
+          "debug": false,
+          "url_pattern": "//v1/quotes/",
+          "encoding": "no-op",
+          "sd": "static",
+          "timeout": "3000ms",
+          "cache_ttl": "300s",
+          "host": [
+            "https://api.breakingbadquotes.xyz"
+          ],
+          "disable_host_sanitize": false
+        }
+      },
+      "backend": [
+        {
+          "url_pattern": "//v1/quotes/",
+          "encoding": "no-op",
+          "sd": "static",
+          "method": "GET",
+          "extra_config": {},
+          "host": [
+            "https://api.breakingbadquotes.xyz"
+          ],
+          "cache_ttl": "300s"
+        }
+      ]
+    }
+  ],
+  "extra_config": {
+    "plugin/http-server": {
+      "name": [
+        "qap-server-billing"
+      ],
+      "qap-server-billing": {
+        "endpoint_checker": "http://qap-stg.qriarlabs.cloud:8091/check",
+        "endpoint_charge": "http://qap-stg.qriarlabs.cloud:8092/charge"
+      }
+    }
+  }
+}
