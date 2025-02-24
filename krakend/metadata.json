@@ -1,0 +1,12 @@
+{
+  "workspace": {
+    "name": "Workspace Cat Facts",
+    "description": "Cat Facts",
+    "dockerRegistry": "gitHub-package-registry"
+  },
+  "environment": {
+    "repository": "QAP-Staging.git",
+    "gitUsername": "CrystianP-Company"
+  },
+  "variables": []
+}
