@@ -1,0 +1,94 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "API-Chuck Norris",
+    "description": "Get random jokes and joke categories from the Chuck Norris API.",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "/",
+      "description": "Main (production) server"
+    },
+    {
+      "url": "https://api.chucknorris.io",
+      "description": "Internal test server"
+    }
+  ],
+  "paths": {
+    "/api-chuck_norris/jokes/categories": {
+      "get": {
+        "summary": "Get joke categories",
+        "description": "Retrieve a list of all joke categories.",
+        "responses": {
+          "200": {
+            "description": "A list of joke categories.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "description": "Name of a joke category."
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": []
+      }
+    },
+    "/api-chuck_norris/jokes/random": {
+      "get": {
+        "summary": "Get a random joke",
+        "description": "Retrieve a random Chuck Norris joke.",
+        "responses": {
+          "200": {
+            "description": "A random Chuck Norris joke.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "icon_url": {
+                      "type": "string",
+                      "description": "URL of the joke's icon."
+                    },
+                    "id": {
+                      "type": "string",
+                      "description": "Unique identifier for the joke."
+                    },
+                    "url": {
+                      "type": "string",
+                      "description": "URL to view the joke."
+                    },
+                    "value": {
+                      "type": "string",
+                      "description": "The content of the joke."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": []
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    }
+  },
+  "security": [
+    {
+      "bearerAuth": []
+    }
+  ]
+}

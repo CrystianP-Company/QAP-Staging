@@ -1,0 +1,12 @@
+{
+  "workspace": {
+    "name": "Workspace  Chuck Norris",
+    "description": "Chuck Norris",
+    "dockerRegistry": "gitHub-package-registry"
+  },
+  "environment": {
+    "repository": "QAP-Staging.git",
+    "gitUsername": "CrystianP-Company"
+  },
+  "variables": []
+}
