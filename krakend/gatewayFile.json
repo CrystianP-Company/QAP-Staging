@@ -1,0 +1,712 @@
+{
+  "version": 3,
+  "name": "MongoDB Example",
+  "timeout": "5000ms",
+  "cache_ttl": "300s",
+  "output_encoding": "no-op",
+  "port": "3890",
+  "endpoints": [
+    {
+      "endpoint": "/mongodb_example/groups/{id}",
+      "method": "GET",
+      "output_encoding": "no-op",
+      "input_headers": [
+        "*"
+      ],
+      "input_query_strings": [],
+      "extra_config": {
+        "security/cors": {
+          "name": "{id}",
+          "allow_origins": [
+            "*"
+          ],
+          "allow_methods": [
+            "GET",
+            "HEAD",
+            "POST"
+          ],
+          "expose_headers": [
+            "Content-Length",
+            "Content-Type"
+          ],
+          "allow_headers": [
+            "Accept-Language"
+          ],
+          "max_age": "12h",
+          "allow_credentials": false,
+          "debug": false,
+          "url_pattern": "/api/container/37882/groups/{id}",
+          "encoding": "no-op",
+          "sd": "static",
+          "timeout": "3000ms",
+          "cache_ttl": "300s",
+          "host": [
+            "https://qscim-demo.qriarlabs.cloud"
+          ],
+          "disable_host_sanitize": false
+        }
+      },
+      "backend": [
+        {
+          "url_pattern": "/api/container/37882/groups/{id}",
+          "encoding": "no-op",
+          "sd": "static",
+          "method": "GET",
+          "extra_config": {},
+          "host": [
+            "https://qscim-demo.qriarlabs.cloud"
+          ],
+          "cache_ttl": "300s"
+        }
+      ]
+    },
+    {
+      "endpoint": "/mongodb_example/groups/{id}",
+      "method": "PUT",
+      "output_encoding": "no-op",
+      "input_headers": [
+        "*"
+      ],
+      "input_query_strings": [],
+      "extra_config": {
+        "security/cors": {
+          "name": "{id}",
+          "allow_origins": [
+            "*"
+          ],
+          "allow_methods": [
+            "GET",
+            "HEAD",
+            "POST"
+          ],
+          "expose_headers": [
+            "Content-Length",
+            "Content-Type"
+          ],
+          "allow_headers": [
+            "Accept-Language"
+          ],
+          "max_age": "12h",
+          "allow_credentials": false,
+          "debug": false,
+          "url_pattern": "/api/container/37882/groups/{id}",
+          "encoding": "no-op",
+          "sd": "static",
+          "timeout": "3000ms",
+          "cache_ttl": "300s",
+          "host": [
+            "https://qscim-demo.qriarlabs.cloud"
+          ],
+          "disable_host_sanitize": false
+        }
+      },
+      "backend": [
+        {
+          "url_pattern": "/api/container/37882/groups/{id}",
+          "encoding": "no-op",
+          "sd": "static",
+          "method": "PUT",
+          "extra_config": {},
+          "host": [
+            "https://qscim-demo.qriarlabs.cloud"
+          ],
+          "cache_ttl": "300s"
+        }
+      ]
+    },
+    {
+      "endpoint": "/mongodb_example/groups/{id}",
+      "method": "PATCH",
+      "output_encoding": "no-op",
+      "input_headers": [
+        "*"
+      ],
+      "input_query_strings": [],
+      "extra_config": {
+        "security/cors": {
+          "name": "{id}",
+          "allow_origins": [
+            "*"
+          ],
+          "allow_methods": [
+            "GET",
+            "HEAD",
+            "POST"
+          ],
+          "expose_headers": [
+            "Content-Length",
+            "Content-Type"
+          ],
+          "allow_headers": [
+            "Accept-Language"
+          ],
+          "max_age": "12h",
+          "allow_credentials": false,
+          "debug": false,
+          "url_pattern": "/api/container/37882/groups/{id}",
+          "encoding": "no-op",
+          "sd": "static",
+          "timeout": "3000ms",
+          "cache_ttl": "300s",
+          "host": [
+            "https://qscim-demo.qriarlabs.cloud"
+          ],
+          "disable_host_sanitize": false
+        }
+      },
+      "backend": [
+        {
+          "url_pattern": "/api/container/37882/groups/{id}",
+          "encoding": "no-op",
+          "sd": "static",
+          "method": "PATCH",
+          "extra_config": {},
+          "host": [
+            "https://qscim-demo.qriarlabs.cloud"
+          ],
+          "cache_ttl": "300s"
+        }
+      ]
+    },
+    {
+      "endpoint": "/mongodb_example/groups/{id}",
+      "method": "DELETE",
+      "output_encoding": "no-op",
+      "input_headers": [
+        "*"
+      ],
+      "input_query_strings": [],
+      "extra_config": {
+        "security/cors": {
+          "name": "{id}",
+          "allow_origins": [
+            "*"
+          ],
+          "allow_methods": [
+            "GET",
+            "HEAD",
+            "POST"
+          ],
+          "expose_headers": [
+            "Content-Length",
+            "Content-Type"
+          ],
+          "allow_headers": [
+            "Accept-Language"
+          ],
+          "max_age": "12h",
+          "allow_credentials": false,
+          "debug": false,
+          "url_pattern": "/api/container/37882/groups/{id}",
+          "encoding": "no-op",
+          "sd": "static",
+          "timeout": "3000ms",
+          "cache_ttl": "300s",
+          "host": [
+            "https://qscim-demo.qriarlabs.cloud"
+          ],
+          "disable_host_sanitize": false
+        }
+      },
+      "backend": [
+        {
+          "url_pattern": "/api/container/37882/groups/{id}",
+          "encoding": "no-op",
+          "sd": "static",
+          "method": "DELETE",
+          "extra_config": {},
+          "host": [
+            "https://qscim-demo.qriarlabs.cloud"
+          ],
+          "cache_ttl": "300s"
+        }
+      ]
+    },
+    {
+      "endpoint": "/mongodb_example/ping",
+      "method": "GET",
+      "output_encoding": "no-op",
+      "input_headers": [
+        "*"
+      ],
+      "input_query_strings": [],
+      "extra_config": {
+        "security/cors": {
+          "name": "ping",
+          "allow_origins": [
+            "*"
+          ],
+          "allow_methods": [
+            "GET",
+            "HEAD",
+            "POST"
+          ],
+          "expose_headers": [
+            "Content-Length",
+            "Content-Type"
+          ],
+          "allow_headers": [
+            "Accept-Language"
+          ],
+          "max_age": "12h",
+          "allow_credentials": false,
+          "debug": false,
+          "url_pattern": "/api/container/37882/ping",
+          "encoding": "no-op",
+          "sd": "static",
+          "timeout": "3000ms",
+          "cache_ttl": "300s",
+          "host": [
+            "https://qscim-demo.qriarlabs.cloud"
+          ],
+          "disable_host_sanitize": false
+        }
+      },
+      "backend": [
+        {
+          "url_pattern": "/api/container/37882/ping",
+          "encoding": "no-op",
+          "sd": "static",
+          "method": "GET",
+          "extra_config": {},
+          "host": [
+            "https://qscim-demo.qriarlabs.cloud"
+          ],
+          "cache_ttl": "300s"
+        }
+      ]
+    },
+    {
+      "endpoint": "/mongodb_example/users",
+      "method": "GET",
+      "output_encoding": "no-op",
+      "input_headers": [
+        "*"
+      ],
+      "input_query_strings": [],
+      "extra_config": {
+        "security/cors": {
+          "name": "users",
+          "allow_origins": [
+            "*"
+          ],
+          "allow_methods": [
+            "GET",
+            "HEAD",
+            "POST"
+          ],
+          "expose_headers": [
+            "Content-Length",
+            "Content-Type"
+          ],
+          "allow_headers": [
+            "Accept-Language"
+          ],
+          "max_age": "12h",
+          "allow_credentials": false,
+          "debug": false,
+          "url_pattern": "/api/container/37882/users",
+          "encoding": "no-op",
+          "sd": "static",
+          "timeout": "3000ms",
+          "cache_ttl": "300s",
+          "host": [
+            "https://qscim-demo.qriarlabs.cloud"
+          ],
+          "disable_host_sanitize": false
+        }
+      },
+      "backend": [
+        {
+          "url_pattern": "/api/container/37882/users",
+          "encoding": "no-op",
+          "sd": "static",
+          "method": "GET",
+          "extra_config": {},
+          "host": [
+            "https://qscim-demo.qriarlabs.cloud"
+          ],
+          "cache_ttl": "300s"
+        }
+      ]
+    },
+    {
+      "endpoint": "/mongodb_example/users",
+      "method": "POST",
+      "output_encoding": "no-op",
+      "input_headers": [
+        "*"
+      ],
+      "input_query_strings": [],
+      "extra_config": {
+        "security/cors": {
+          "name": "users",
+          "allow_origins": [
+            "*"
+          ],
+          "allow_methods": [
+            "GET",
+            "HEAD",
+            "POST"
+          ],
+          "expose_headers": [
+            "Content-Length",
+            "Content-Type"
+          ],
+          "allow_headers": [
+            "Accept-Language"
+          ],
+          "max_age": "12h",
+          "allow_credentials": false,
+          "debug": false,
+          "url_pattern": "/api/container/37882/users",
+          "encoding": "no-op",
+          "sd": "static",
+          "timeout": "3000ms",
+          "cache_ttl": "300s",
+          "host": [
+            "https://qscim-demo.qriarlabs.cloud"
+          ],
+          "disable_host_sanitize": false
+        }
+      },
+      "backend": [
+        {
+          "url_pattern": "/api/container/37882/users",
+          "encoding": "no-op",
+          "sd": "static",
+          "method": "POST",
+          "extra_config": {},
+          "host": [
+            "https://qscim-demo.qriarlabs.cloud"
+          ],
+          "cache_ttl": "300s"
+        }
+      ]
+    },
+    {
+      "endpoint": "/mongodb_example/users/{id}",
+      "method": "GET",
+      "output_encoding": "no-op",
+      "input_headers": [
+        "*"
+      ],
+      "input_query_strings": [],
+      "extra_config": {
+        "security/cors": {
+          "name": "{id}",
+          "allow_origins": [
+            "*"
+          ],
+          "allow_methods": [
+            "GET",
+            "HEAD",
+            "POST"
+          ],
+          "expose_headers": [
+            "Content-Length",
+            "Content-Type"
+          ],
+          "allow_headers": [
+            "Accept-Language"
+          ],
+          "max_age": "12h",
+          "allow_credentials": false,
+          "debug": false,
+          "url_pattern": "/api/container/37882/users/{id}",
+          "encoding": "no-op",
+          "sd": "static",
+          "timeout": "3000ms",
+          "cache_ttl": "300s",
+          "host": [
+            "https://qscim-demo.qriarlabs.cloud"
+          ],
+          "disable_host_sanitize": false
+        }
+      },
+      "backend": [
+        {
+          "url_pattern": "/api/container/37882/users/{id}",
+          "encoding": "no-op",
+          "sd": "static",
+          "method": "GET",
+          "extra_config": {},
+          "host": [
+            "https://qscim-demo.qriarlabs.cloud"
+          ],
+          "cache_ttl": "300s"
+        }
+      ]
+    },
+    {
+      "endpoint": "/mongodb_example/users/{id}",
+      "method": "PUT",
+      "output_encoding": "no-op",
+      "input_headers": [
+        "*"
+      ],
+      "input_query_strings": [],
+      "extra_config": {
+        "security/cors": {
+          "name": "{id}",
+          "allow_origins": [
+            "*"
+          ],
+          "allow_methods": [
+            "GET",
+            "HEAD",
+            "POST"
+          ],
+          "expose_headers": [
+            "Content-Length",
+            "Content-Type"
+          ],
+          "allow_headers": [
+            "Accept-Language"
+          ],
+          "max_age": "12h",
+          "allow_credentials": false,
+          "debug": false,
+          "url_pattern": "/api/container/37882/users/{id}",
+          "encoding": "no-op",
+          "sd": "static",
+          "timeout": "3000ms",
+          "cache_ttl": "300s",
+          "host": [
+            "https://qscim-demo.qriarlabs.cloud"
+          ],
+          "disable_host_sanitize": false
+        }
+      },
+      "backend": [
+        {
+          "url_pattern": "/api/container/37882/users/{id}",
+          "encoding": "no-op",
+          "sd": "static",
+          "method": "PUT",
+          "extra_config": {},
+          "host": [
+            "https://qscim-demo.qriarlabs.cloud"
+          ],
+          "cache_ttl": "300s"
+        }
+      ]
+    },
+    {
+      "endpoint": "/mongodb_example/users/{id}",
+      "method": "PATCH",
+      "output_encoding": "no-op",
+      "input_headers": [
+        "*"
+      ],
+      "input_query_strings": [],
+      "extra_config": {
+        "security/cors": {
+          "name": "{id}",
+          "allow_origins": [
+            "*"
+          ],
+          "allow_methods": [
+            "GET",
+            "HEAD",
+            "POST"
+          ],
+          "expose_headers": [
+            "Content-Length",
+            "Content-Type"
+          ],
+          "allow_headers": [
+            "Accept-Language"
+          ],
+          "max_age": "12h",
+          "allow_credentials": false,
+          "debug": false,
+          "url_pattern": "/api/container/37882/users/{id}",
+          "encoding": "no-op",
+          "sd": "static",
+          "timeout": "3000ms",
+          "cache_ttl": "300s",
+          "host": [
+            "https://qscim-demo.qriarlabs.cloud"
+          ],
+          "disable_host_sanitize": false
+        }
+      },
+      "backend": [
+        {
+          "url_pattern": "/api/container/37882/users/{id}",
+          "encoding": "no-op",
+          "sd": "static",
+          "method": "PATCH",
+          "extra_config": {},
+          "host": [
+            "https://qscim-demo.qriarlabs.cloud"
+          ],
+          "cache_ttl": "300s"
+        }
+      ]
+    },
+    {
+      "endpoint": "/mongodb_example/users/{id}",
+      "method": "DELETE",
+      "output_encoding": "no-op",
+      "input_headers": [
+        "*"
+      ],
+      "input_query_strings": [],
+      "extra_config": {
+        "security/cors": {
+          "name": "{id}",
+          "allow_origins": [
+            "*"
+          ],
+          "allow_methods": [
+            "GET",
+            "HEAD",
+            "POST"
+          ],
+          "expose_headers": [
+            "Content-Length",
+            "Content-Type"
+          ],
+          "allow_headers": [
+            "Accept-Language"
+          ],
+          "max_age": "12h",
+          "allow_credentials": false,
+          "debug": false,
+          "url_pattern": "/api/container/37882/users/{id}",
+          "encoding": "no-op",
+          "sd": "static",
+          "timeout": "3000ms",
+          "cache_ttl": "300s",
+          "host": [
+            "https://qscim-demo.qriarlabs.cloud"
+          ],
+          "disable_host_sanitize": false
+        }
+      },
+      "backend": [
+        {
+          "url_pattern": "/api/container/37882/users/{id}",
+          "encoding": "no-op",
+          "sd": "static",
+          "method": "DELETE",
+          "extra_config": {},
+          "host": [
+            "https://qscim-demo.qriarlabs.cloud"
+          ],
+          "cache_ttl": "300s"
+        }
+      ]
+    },
+    {
+      "endpoint": "/mongodb_example/groups",
+      "method": "GET",
+      "output_encoding": "no-op",
+      "input_headers": [
+        "*"
+      ],
+      "input_query_strings": [],
+      "extra_config": {
+        "security/cors": {
+          "name": "groups",
+          "allow_origins": [
+            "*"
+          ],
+          "allow_methods": [
+            "GET",
+            "HEAD",
+            "POST"
+          ],
+          "expose_headers": [
+            "Content-Length",
+            "Content-Type"
+          ],
+          "allow_headers": [
+            "Accept-Language"
+          ],
+          "max_age": "12h",
+          "allow_credentials": false,
+          "debug": false,
+          "url_pattern": "/api/container/37882/groups",
+          "encoding": "no-op",
+          "sd": "static",
+          "timeout": "3000ms",
+          "cache_ttl": "300s",
+          "host": [
+            "https://qscim-demo.qriarlabs.cloud"
+          ],
+          "disable_host_sanitize": false
+        }
+      },
+      "backend": [
+        {
+          "url_pattern": "/api/container/37882/groups",
+          "encoding": "no-op",
+          "sd": "static",
+          "method": "GET",
+          "extra_config": {},
+          "host": [
+            "https://qscim-demo.qriarlabs.cloud"
+          ],
+          "cache_ttl": "300s"
+        }
+      ]
+    },
+    {
+      "endpoint": "/mongodb_example/groups",
+      "method": "POST",
+      "output_encoding": "no-op",
+      "input_headers": [
+        "*"
+      ],
+      "input_query_strings": [],
+      "extra_config": {
+        "security/cors": {
+          "name": "groups",
+          "allow_origins": [
+            "*"
+          ],
+          "allow_methods": [
+            "GET",
+            "HEAD",
+            "POST"
+          ],
+          "expose_headers": [
+            "Content-Length",
+            "Content-Type"
+          ],
+          "allow_headers": [
+            "Accept-Language"
+          ],
+          "max_age": "12h",
+          "allow_credentials": false,
+          "debug": false,
+          "url_pattern": "/api/container/37882/groups",
+          "encoding": "no-op",
+          "sd": "static",
+          "timeout": "3000ms",
+          "cache_ttl": "300s",
+          "host": [
+            "https://qscim-demo.qriarlabs.cloud"
+          ],
+          "disable_host_sanitize": false
+        }
+      },
+      "backend": [
+        {
+          "url_pattern": "/api/container/37882/groups",
+          "encoding": "no-op",
+          "sd": "static",
+          "method": "POST",
+          "extra_config": {},
+          "host": [
+            "https://qscim-demo.qriarlabs.cloud"
+          ],
+          "cache_ttl": "300s"
+        }
+      ]
+    }
+  ]
+}
