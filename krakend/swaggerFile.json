@@ -1,0 +1,52 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "API-CoinGecko",
+    "description": "Access cryptocurrency data, including prices, market data, and historical information using the CoinGecko API.",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://qap-workspace-pipeline-test-qfm4nbgbkq-uc.a.run.app",
+      "description": "Main (production) server"
+    },
+    {
+      "url": "https://qap-workspace-pipeline-test-qfm4nbgbkq-uc.a.run.app",
+      "description": "Internal test server"
+    }
+  ],
+  "paths": {
+    "/api-coingecko/billings": {
+      "get": {
+        "summary": "Endpoint",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": []
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    }
+  },
+  "security": [
+    {
+      "bearerAuth": []
+    }
+  ]
+}

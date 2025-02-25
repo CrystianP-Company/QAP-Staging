@@ -1,0 +1,55 @@
+{
+  "version": 3,
+  "timeout": "5000ms",
+  "cache_ttl": "300s",
+  "output_encoding": "no-op",
+  "port": 3890,
+  "endpoints": [
+    {
+      "endpoint": "/api-coingecko/billings",
+      "method": "GET",
+      "output_encoding": "no-op",
+      "input_headers": [
+        "*"
+      ],
+      "input_query_strings": [],
+      "extra_config": {
+        "security/cors": {
+          "name": "Billings",
+          "allow_origins": [
+            "*"
+          ],
+          "allow_methods": [
+            "GET"
+          ],
+          "expose_headers": [
+            "*"
+          ],
+          "allow_headers": [
+            "*"
+          ],
+          "max_age": "12h",
+          "allow_credentials": false,
+          "debug": false,
+          "url_pattern": "/users",
+          "encoding": "json",
+          "sd": "static",
+          "cache_ttl": "",
+          "disable_host_sanitize": ""
+        }
+      },
+      "backend": [
+        {
+          "url_pattern": "/users",
+          "encoding": "json",
+          "sd": "static",
+          "method": "GET",
+          "extra_config": {},
+          "host": [
+            "https://63ee25ec5e9f1583bdbd0d37.mockapi.io"
+          ]
+        }
+      ]
+    }
+  ]
+}
