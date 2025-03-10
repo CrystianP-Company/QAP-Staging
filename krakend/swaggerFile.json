@@ -1,0 +1,114 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Advice Slip API",
+    "description": "Retrieve random pieces of advice.",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://qap-workspace-pipeline-test-qfm4nbgbkq-uc.a.run.app",
+      "description": "Main (production) server"
+    },
+    {
+      "url": "https://qap-workspace-pipeline-test-qfm4nbgbkq-uc.a.run.app",
+      "description": "Internal test server"
+    }
+  ],
+  "paths": {
+    "openapi": "3.0.0",
+    "info": {
+      "title": "Advice Slip API",
+      "description": "Retrieve random pieces of advice.",
+      "version": "1.0.0"
+    },
+    "servers": [
+      {
+        "url": "/",
+        "description": "Main (production) server"
+      },
+      {
+        "url": "https://api.adviceslip.com",
+        "description": "Internal test server"
+      }
+    ],
+    "paths": {
+      "/api-advice/advice": {
+        "get": {
+          "summary": "Get random advice",
+          "description": "Retrieve a random piece of advice.",
+          "responses": {
+            "200": {
+              "description": "A random piece of advice.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "slip": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "integer",
+                            "description": "The unique ID of the advice."
+                          },
+                          "advice": {
+                            "type": "string",
+                            "description": "The text of the advice."
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "examples": {
+                    "example-1": {
+                      "summary": "Example response",
+                      "value": {
+                        "slip": {
+                          "id": 123,
+                          "advice": "Always trust your instincts."
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "Advice not found."
+            }
+          },
+          "parameters": []
+        }
+      }
+    },
+    "components": {
+      "securitySchemes": {
+        "bearerAuth": {
+          "type": "http",
+          "scheme": "bearer",
+          "bearerFormat": "JWT"
+        }
+      }
+    },
+    "security": [
+      {
+        "bearerAuth": []
+      }
+    ]
+  },
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    }
+  },
+  "security": [
+    {
+      "bearerAuth": []
+    }
+  ]
+}
