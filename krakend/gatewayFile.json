@@ -1,0 +1,75 @@
+{
+  "version": 3,
+  "timeout": "5000ms",
+  "cache_ttl": "300s",
+  "output_encoding": "no-op",
+  "port": 3890,
+  "plugin": {
+    "pattern": ".so",
+    "folder": "/etc/plugins/"
+  },
+  "endpoints": [
+    {
+      "endpoint": "/api-advice/advice",
+      "method": "GET",
+      "output_encoding": "no-op",
+      "input_headers": [
+        "*"
+      ],
+      "input_query_strings": [],
+      "extra_config": {
+        "security/cors": {
+          "name": "advice",
+          "allow_origins": [
+            "*"
+          ],
+          "allow_methods": [
+            "GET",
+            "HEAD",
+            "POST"
+          ],
+          "expose_headers": [
+            "Content-Length",
+            "Content-Type"
+          ],
+          "allow_headers": [
+            "Accept-Language"
+          ],
+          "max_age": "12h",
+          "allow_credentials": false,
+          "debug": false,
+          "url_pattern": "/advice",
+          "encoding": "no-op",
+          "sd": "static",
+          "timeout": "3000ms",
+          "cache_ttl": "300s",
+          "disable_host_sanitize": false
+        }
+      },
+      "backend": [
+        {
+          "url_pattern": "/advice",
+          "encoding": "no-op",
+          "sd": "static",
+          "method": "GET",
+          "extra_config": {},
+          "host": [
+            "https://api.adviceslip.com"
+          ],
+          "cache_ttl": "300s"
+        }
+      ]
+    }
+  ],
+  "extra_config": {
+    "plugin/http-server": {
+      "name": [
+        "qap-server-billing"
+      ],
+      "qap-server-billing": {
+        "endpoint_checker": "http://qap-stg.qriarlabs.cloud:8091/check",
+        "endpoint_charge": "http://qap-stg.qriarlabs.cloud:8092/charge"
+      }
+    }
+  }
+}
